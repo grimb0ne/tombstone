@@ -40,6 +40,8 @@
 #define OUT 1
 #endif
 
+#define LOG(x) std::cout << x
+
 typedef unsigned char BYTE;
 typedef BYTE *PBYTE, *LPBYTE;
 typedef unsigned long DWORD;
