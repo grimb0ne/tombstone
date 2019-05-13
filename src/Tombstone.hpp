@@ -23,6 +23,7 @@
 #else
 #define NULL ((void*)0)
 #endif
+#endif
 #ifndef FALSE
 #define FALSE 0
 #endif
