@@ -48,6 +48,17 @@ typedef unsigned short WORD;
 typedef WORD *PWORD, *LPWORD;
 typedef CONST void *PCVOID, *LPCVOID;
 
+auto flipSign = [](signed &value) decltype(auto) -> {
+    if (value < 0) {
+        value = value * (-1);    
+    } else if (value > 0) {
+        value = value * (-1);    
+    } else {
+        value = value;
+    }
+    return value;
+};
+
 namespace Tombstone {
     /* ======================================== [ Begin "Unique" Functions ] ======================================== */
     decltype(auto) getCurrentTime() {
