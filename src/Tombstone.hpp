@@ -92,7 +92,7 @@ namespace Tombstone {
             return false;
         }
     }
-    void File::clearFile(const std::string filePath) {
+    int File::clearFile(const std::string filePath) {
         std::ofstream targetFile;
         if (isOnDisk(filePath)) {
             targetFile.open(filePath.c_str(), std::ios::write);
