@@ -8,6 +8,45 @@
 #include <algorithm>
 #include <Windows.h>
 
+#ifdef max
+#undef max
+#define max(a, b) ((a) > (b) ? (a) : (b))
+#endif
+#ifdef min
+#undef min
+#define min(a, b) ((a) < (b) ? (a) : (b))
+#endif
+
+#ifndef NULL
+#ifdef __cplusplus
+#define NULL 0
+#else
+#define NULL ((void*)0)
+#endif
+#ifndef FALSE
+#define FALSE 0
+#endif
+#ifndef TRUE
+#define TRUE 1
+#endif
+#ifndef CONST
+#define CONST const
+#endif
+#ifndef IN
+#define IN 0
+#endif
+#ifndef OUT
+#define OUT 1
+#endif
+
+typedef unsigned char BYTE;
+typedef BYTE *PBYTE, *LPBYTE;
+typedef unsigned long DWORD;
+typedef DWORD *PDWORD, *LPDWORD;
+typedef unsigned short WORD;
+typedef WORD *PWORD, *LPWORD;
+typedef CONST void *PCVOID, *LPCVOID;
+
 namespace Tombstone {
     /* ======================================== [ Begin "Unique" Functions ] ======================================== */
     decltype(auto) getCurrentTime() {
