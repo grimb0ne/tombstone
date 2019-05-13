@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <chrono>
-#incldue <algorithm>
+#include <algorithm>
 #include <Windows.h>
 
 namespace Tombstone {
