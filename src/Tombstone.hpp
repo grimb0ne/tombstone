@@ -71,6 +71,27 @@ namespace Tombstone {
     }
     /* ======================================== [ End "Unique" Functions ] ======================================== */
 
+    /* ======================================== [ Begin Vector Struct ] ======================================== */
+    struct Vector {
+        template<typename T>
+        static void cycleVector(const std::vector<T>& vect);   
+        template<typename T>
+        static void fillVector(const std::vector<T>& vect, T content);
+    };
+    template<typename t>
+    void Vector::cycleVector(const std::vector<T>& vect) {
+        for (WORD i = 0; i < vect.size(); i++) {
+            std::cout << vect.at(i) << ", ";
+        }
+    }
+    template<typename T>
+    void Vector::fillVector(const std::vector<T>& vect, T content) {
+        for (WORD i = 0; i < vect.size(); i++) {
+            vect.at(i) = content;    
+        }
+    }
+    /* ======================================== [ End Vector Struct ] ======================================== */
+    
     /* ======================================== [ Begin File Class ] ======================================== */
     class File {
     private:
